@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Header from './components/Header';
-import Aside from './components/Aside';
+import Header from './layout/Header';
+import Aside from './layout/Aside';
+import Dashboard from './pages/Dashboard';
 
 const router = createBrowserRouter([
   {
@@ -8,7 +9,10 @@ const router = createBrowserRouter([
     element: (
       <>
         <Header />
-        <Aside />
+        <main>
+          <Aside />
+          <Dashboard />
+        </main>
       </>
     ),
   },

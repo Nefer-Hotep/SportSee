@@ -1,0 +1,30 @@
+.aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: black;
+  height: 100vh;
+  width: 117px;
+
+  &__nav {
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__logo {
+    @include center;
+    border-radius: 6px;
+    height: 64px;
+    width: 64px;
+    background-color: white;
+  }
+
+  &__copyright {
+    width: 138px;
+    rotate: -90deg;
+    align-self: center;
+  }
+}
