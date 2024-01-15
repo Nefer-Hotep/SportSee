@@ -1,7 +1,8 @@
+import Activity from '../components/Activity';
 import useFetch from '../service/UseFetch';
 
 function Dashboard() {
-  const userId = 18;
+  const userId = 12;
 
   const { data, loading, error } = useFetch('user', userId);
 
@@ -15,10 +16,14 @@ function Dashboard() {
     <article>
       <div className='article__header'>
         <h1>
-          Bonjour <span className='article__header--firstName'>{data.userInfos.firstName}</span>
+          Bonjour{' '}
+          <span className='article__header--firstName'>
+            {data.userInfos.firstName}
+          </span>
         </h1>
         <p>Félicitation ! Vous avez explosé vos objectifs hier</p>
       </div>
+      <Activity  userId={userId}/>
     </article>
   );
 }
