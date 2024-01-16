@@ -7,7 +7,7 @@ function Header() {
       <img className='header__img' src={LogoSportSee} alt='Logo SportSee' />
       <nav className='header__nav'>
         <NavLink to='/' className='header__navLink'>
-          Acceuil
+          Accueil
         </NavLink>
         <NavLink to='/' className='header__navLink'>
           Profil

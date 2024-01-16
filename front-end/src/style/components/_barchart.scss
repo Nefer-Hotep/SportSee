@@ -1,0 +1,48 @@
+.barchart {
+  width: 835px;
+  height: 320px;
+  background: #fbfbfb;
+  border-radius: 6px;
+
+  &__legend {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__type {
+    display: flex;
+    gap: 32px;
+
+    &--box {
+      align-items: center;
+      display: flex;
+      gap: 10px;
+    }
+    &--text {
+      color: #74798c;
+    }
+  }
+  &__circle--red {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: $color-primary;
+  }
+
+  &__circle--black {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: $color-secondary;
+  }
+}
+
+.customTooltip {
+  @include center;
+  flex-direction: column;
+  text-align: center;
+  background-color: $color-primary;
+  height: 90px;
+  width: 60px;
+  gap: 20px;
+}

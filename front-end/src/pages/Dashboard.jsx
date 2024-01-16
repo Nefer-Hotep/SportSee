@@ -1,4 +1,4 @@
-import Activity from '../components/Activity';
+import ActivityBarchart from '../components/ActivityBarchart';
 import useFetch from '../service/UseFetch';
 
 function Dashboard() {
@@ -6,14 +6,12 @@ function Dashboard() {
 
   const { data, loading, error } = useFetch('user', userId);
 
-  console.log(data);
-
   if (loading) return <div>Chargement...</div>;
   if (error) return <div>Erreur : {error}</div>;
   if (!data) return <div>Aucune donnée trouvée</div>;
 
   return (
-    <article>
+    <article className='article'>
       <div className='article__header'>
         <h1>
           Bonjour{' '}
@@ -21,9 +19,11 @@ function Dashboard() {
             {data.userInfos.firstName}
           </span>
         </h1>
-        <p>Félicitation ! Vous avez explosé vos objectifs hier</p>
+        <p className='article__header--text'>Félicitation ! Vous avez explosé vos objectifs hier</p>
       </div>
-      <Activity  userId={userId}/>
+      <div className='article__container'>
+        <ActivityBarchart userId={userId} />
+      </div>
     </article>
   );
 }

@@ -11,3 +11,21 @@
   color: white;
   font-size: 12px;
 }
+.article__header {
+  h1 {
+    font-size: 48px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  &--firstName {
+    color: $color-primary;
+  }
+}
+
+.customTooltip {
+  color: white;
+  font-size: 14px;
+}
