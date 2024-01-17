@@ -1,4 +1,5 @@
 import ActivityBarchart from '../components/ActivityBarchart';
+import AverageLineChart from '../components/AverageLineChart';
 import useFetch from '../service/UseFetch';
 
 function Dashboard() {
@@ -19,10 +20,17 @@ function Dashboard() {
             {data.userInfos.firstName}
           </span>
         </h1>
-        <p className='article__header--text'>Félicitation ! Vous avez explosé vos objectifs hier</p>
+        <p className='article__header--text'>
+          Félicitation ! Vous avez explosé vos objectifs hier
+        </p>
       </div>
       <div className='article__container'>
-        <ActivityBarchart userId={userId} />
+        <div className='charts'>
+          <ActivityBarchart userId={userId} />
+          <div className='charts__bottom'>
+            <AverageLineChart userId={userId} />
+          </div>
+        </div>
       </div>
     </article>
   );

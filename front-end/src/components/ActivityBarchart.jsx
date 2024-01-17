@@ -7,9 +7,7 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-  Text,
   CartesianGrid,
-  Rectangle
 } from 'recharts';
 import useFetch from '../service/UseFetch';
 
@@ -37,7 +35,6 @@ function ActivityBarchart({ userId }) {
           }}
           barGap={8}
         >
-          <Text />
           <CartesianGrid strokeDasharray='3 3' vertical={false} />
           <XAxis
             dataKey='day'
@@ -59,7 +56,7 @@ function ActivityBarchart({ userId }) {
             orientation='right'
             axisLine={false}
             domain={['dataMin - 2', 'dataMax + 1']}
-            tickCount="3"
+            tickCount='3'
           />
           <YAxis
             dataKey='calories'
@@ -68,8 +65,8 @@ function ActivityBarchart({ userId }) {
             domain={['dataMin - 80', 'dataMax + 10']}
             hide
           />
-          <Tooltip content={<CustomTooltip />}  />
-          
+          <Tooltip content={<CustomTooltip />} />
+
           <Legend
             iconSize={8}
             verticalAlign='top'
@@ -102,21 +99,6 @@ function ActivityBarchart({ userId }) {
     </div>
   );
 }
-function CustomizedCursor({ points }) {
-  return (
-    <Rectangle
-      fill="black"
-      opacity={0.1}
-      x={points[1].x}
-      width={500}
-      height={300}
-    />
-  );
-}
-
-CustomizedCursor.propTypes = {
-  points: PropTypes.string,
-};
 
 const CustomLegend = ({ payload }) => {
   return (
@@ -131,7 +113,10 @@ const CustomLegend = ({ payload }) => {
         </div>
         <div className='barchart__type--box'>
           <div className='barchart__circle--red'></div>
-          <li key={`item-${payload[0].value}`} className='barchart__type--text'>
+          <li
+            key={`item-${payload[0].value}`}
+            className='barchart__type--text  '
+          >
             {payload[1].value}
           </li>
         </div>

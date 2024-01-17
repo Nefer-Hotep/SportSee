@@ -11,4 +11,12 @@
   }
 }
 
-
+.charts {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &__bottom {
+    height: 263px;
+    margin-top: 30px;
+  }
+}
