@@ -16,7 +16,9 @@
   flex-direction: column;
   height: 100%;
   &__bottom {
+    display: flex;
     height: 263px;
     margin-top: 30px;
+    gap: 30px;
   }
 }

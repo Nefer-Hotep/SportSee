@@ -1,8 +1,11 @@
 import ActivityBarchart from '../components/ActivityBarchart';
 import AverageLineChart from '../components/AverageLineChart';
+import PerformanceRadarchart from '../components/PerformanceRadarchart';
+import ScoreRadialBarChart from '../components/ScoreRadialbarchart';
 import useFetch from '../service/UseFetch';
 
 function Dashboard() {
+  // Change the id here to change user.
   const userId = 12;
 
   const { data, loading, error } = useFetch('user', userId);
@@ -29,6 +32,8 @@ function Dashboard() {
           <ActivityBarchart userId={userId} />
           <div className='charts__bottom'>
             <AverageLineChart userId={userId} />
+            <PerformanceRadarchart userId={userId} />
+            <ScoreRadialBarChart data={data}/>
           </div>
         </div>
       </div>

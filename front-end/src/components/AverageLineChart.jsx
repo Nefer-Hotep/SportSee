@@ -19,7 +19,6 @@ function AverageLineChart({ userId }) {
   if (data) {
     addNullEntries(data);
   }
-  console.log(data);
 
   if (loading) return <div>Chargement...</div>;
   if (error) return <div>Erreur : {error}</div>;
