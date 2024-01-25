@@ -15,9 +15,13 @@ body {
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 main {
   display: flex;
+  height: 933px;
+  
+  @media (max-width: 1350px) {
+    height: 1130px;
+  }
 }

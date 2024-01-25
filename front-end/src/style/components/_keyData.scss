@@ -1,0 +1,63 @@
+.keyData {
+  display: flex;
+  flex-direction: column;
+  gap: 39px;
+  @media (max-width: 1350px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    padding-left: 32px;
+    height: 124px;
+    width: 258px;
+    gap: 24px;
+    background-color: $color-light-grey;
+    @media (max-width: 1350px) {
+      width: 100%;
+    }
+  }
+
+  &__logo {
+    @include center;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__value {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__type {
+    font-size: 14px;
+    color: $color-grey;
+  }
+}
+
+.red {
+  background: #ff000019;
+}
+
+.blue {
+  background: #4ab8ff1a;
+}
+
+.yellow {
+  background: #f9ce231e;
+}
+
+.pink {
+  background: #fd51811a;
+}

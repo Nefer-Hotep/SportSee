@@ -36,6 +36,7 @@ const processResponseData = (endPoint, jsonData) => {
   }
 };
 
+// Change the jsonData depending on the environment
 const processJsonData = (jsonData, endPoint, userId) => {
   if (import.meta.env.DEV) {
     jsonData = jsonData.find(
@@ -47,6 +48,7 @@ const processJsonData = (jsonData, endPoint, userId) => {
   return processResponseData(endPoint, jsonData);
 };
 
+// Change the url depending on the environment
 const buildUrl = (endPoint, userId) => {
   const baseUrl = import.meta.env.VITE_API_URL || '';
   const isDevMode = import.meta.env.DEV;

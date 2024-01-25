@@ -14,5 +14,8 @@
     display: flex;
     padding-right: 91px;
     gap: 204px;
+    @media (max-width: 1350px) {
+      gap: 50px;
+    }
   }
 }

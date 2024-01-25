@@ -1,13 +1,27 @@
 .article {
   width: 100%;
-  margin-top: 68px;
+  height: 100%;
+  padding-top: 68px;
   padding-left: 107px;
+
+  @media (max-width: 1150px) {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
   &__header--text {
     margin-top: 41px;
   }
 
   &__container {
+    display: flex;
     margin-top: 77px;
+    gap: 31px;
+    @media (max-width: 1350px) {
+      max-width: 835px;
+      flex-direction: column;
+      width: 100%;
+    }
   }
 }
 

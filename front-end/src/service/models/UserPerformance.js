@@ -27,6 +27,7 @@ class UserPerformance {
       kind: kindMapping[kind[d.kind.toString()]],
     }));
 
+    // Order the kind as needed
     this.data.sort((a, b) => {
       const indexA = order.indexOf(a.kind);
       const indexB = order.indexOf(b.kind);

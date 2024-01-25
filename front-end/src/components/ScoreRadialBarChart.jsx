@@ -11,7 +11,6 @@ ScoreRadialBarChart.propTypes = {
 };
 
 function ScoreRadialBarChart({ data }) {
-  console.log(data.scoreData);
   return (
     <div className='radialBarChart'>
       <h4 className='radialBarChart__title'>Score</h4>
