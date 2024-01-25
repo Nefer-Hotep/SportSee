@@ -1,10 +1,15 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
   background-color: black;
   height: 91px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 1350px) {
+    justify-content: space-between;
+    padding-right: 91px;
+  }
 
   &__img {
     padding-left: 28px;
@@ -12,10 +17,10 @@
 
   &__nav {
     display: flex;
-    padding-right: 91px;
-    gap: 204px;
+    gap: 190px;
+    padding-left: 149px;
     @media (max-width: 1350px) {
-      gap: 50px;
+      gap: 70px;
     }
   }
 }
